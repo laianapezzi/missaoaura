@@ -1,0 +1,361 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* MANTENDO O FUNDO ORIGINAL */
+  min-height: 100vh;
+  background-image: url("img/login-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 25px 15px;
+}
+
+#tela_login {
+  background-color: #b6113aeF;
+  border: 1px solid #999999;
+  border-radius: 10px;
+
+  width: 100%;
+  max-width: 650px;
+  padding: 25px;
+
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+
+  box-shadow: 0 0 25px #00000066;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.subtitulo {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #ffd3df;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.introducao {
+  line-height: 1.6;
+  color: #ffeaf0;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.titulo-perguntas {
+  padding-top: 15px;
+  border-top: 1px solid #ffffff55;
+}
+
+label {
+  display: block;
+  margin-top: 17px;
+  margin-bottom: 7px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+input,
+select {
+  display: block;
+  margin-bottom: 5px;
+  padding: 11px;
+  border-radius: 7px;
+  border: 1px solid #db0042;
+
+  width: 100%;
+  min-height: 43px;
+
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242424;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #ffb4cb;
+  outline-offset: 2px;
+}
+
+button {
+  width: 100%;
+  min-height: 45px;
+  margin-top: 20px;
+  padding: 10px;
+
+  border-radius: 7px;
+  border: 1px solid #5e5e5e;
+
+  background-color: #ffffff;
+  color: #b6113a;
+
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffe0e9;
+}
+
+button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+#msg {
+  color: #ffffff;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#resultado {
+  border-top: 1px solid #ffffff66;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+#dados_participante {
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+#perfis_resultado {
+  width: 100%;
+}
+
+.perfil-card {
+  background-color: #ffffffee;
+  color: #29202a;
+  border: 1px solid #999999;
+  border-radius: 10px;
+
+  padding: 18px;
+  margin-top: 20px;
+}
+
+.perfil-card h3 {
+  color: #b6113a;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.categoria {
+  display: inline-block;
+  background-color: #b6113a;
+  color: #ffffff;
+
+  border-radius: 20px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+
+  font-size: 13px;
+}
+
+.perfil-card p {
+  line-height: 1.7;
+}
+
+.imagem-perfil {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+  margin: 15px auto;
+
+  border-radius: 8px;
+  border: 1px solid #999999;
+}
+
+.aviso-empate {
+  background-color: #ffffff;
+  color: #b6113a;
+  padding: 12px;
+  border-radius: 7px;
+  line-height: 1.6;
+}
+
+#refazer {
+  background-color: #ffffff;
+  color: #b6113a;
+}
+
+#alerta {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000dd;
+  z-index: 9999;
+
+  visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+}
+
+#caixa_alerta {
+  position: relative;
+  background: #ffffff;
+  color: #222222;
+
+  width: 100%;
+  max-width: 500px;
+
+  padding: 45px 20px 20px;
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+#fechar_alerta {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #dd0833;
+  color: #ffffff;
+
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#msg_alerta {
+  margin: 10px;
+  color: #222222;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* DESAFIO: BORDA VERMELHA QUANDO DER ERRO */
+.erro {
+  border: 2px solid #ff0000 !important;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 499px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  main {
+    padding: 12px 10px;
+  }
+
+  #tela_login {
+    width: 100%;
+    padding: 18px 14px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .subtitulo {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-height: 46px;
+    font-size: 16px;
+  }
+
+  button {
+    min-height: 46px;
+    font-size: 14px;
+  }
+
+  .perfil-card {
+    padding: 14px;
+  }
+
+  .perfil-card h3 {
+    font-size: 20px;
+  }
+
+  .imagem-perfil {
+    max-width: 100%;
+  }
+
+  #caixa_alerta {
+    padding: 45px 15px 20px;
+  }
+}

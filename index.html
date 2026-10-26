@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Missão Aura</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div id="overlay"></div>
+
+    <main>
+      <div id="tela_login">
+
+        <header>
+          <p class="subtitulo">MISSÃO ESPACIAL • ANO 2089</p>
+          <h1>Missão Aura</h1>
+          <p class="introducao">
+            Descubra seu perfil e encontre seu lugar
+            na exploração de um planeta desconhecido!
+          </p>
+        </header>
+
+        <form action="javascript:void(0)" method="get" id="valida">
+
+          <h2>Identificação do participante</h2>
+
+          <label for="user">Seu nome:</label>
+          <input
+            type="text"
+            id="user"
+            name="user"
+            placeholder="Informe seu nome"
+            maxlength="80"
+          >
+
+          <label for="nascimento">Data de nascimento:</label>
+          <input
+            type="date"
+            id="nascimento"
+            name="nascimento"
+          >
+
+          <h2 class="titulo-perguntas">Questionário da missão</h2>
+
+          <label for="p1">
+            1. Ao encontrar uma máquina desconhecida, você prefere:
+          </label>
+          <select id="p1" name="p1">
+            <option value="">Escolha sua resposta</option>
+            <option value="1">Construir, consertar e testar</option>
+            <option value="2">Pesquisar como ela funciona</option>
+            <option value="3">Explorar suas possibilidades</option>
+            <option value="4">Organizar um plano de ação</option>
+          </select>
+
+          <label for="p2">
+            2. Qual atividade mais combina com você?
+          </label>
+          <select id="p2" name="p2">
+            <option value="">Escolha sua resposta</option>
+            <option value="1">Criar soluções para problemas</option>
+            <option value="2">Investigar mistérios e evidências</option>
+            <option value="3">Conhecer lugares desconhecidos</option>
+            <option value="4">Liderar e organizar uma equipe</option>
+          </select>
+
+          <label for="p3">
+            3. Durante uma emergência, você costuma:
+          </label>
+          <select id="p3" name="p3">
+            <option value="">Escolha sua resposta</option>
+            <option value="1">Procurar uma solução prática</option>
+            <option value="2">Analisar os fatos antes de agir</option>
+            <option value="3">Experimentar alternativas diferentes</option>
+            <option value="4">Definir prioridades e coordenar pessoas</option>
+          </select>
+
+          <label for="p4">
+            4. Qual seria sua maior contribuição para a missão?
+          </label>
+          <select id="p4" name="p4">
+            <option value="">Escolha sua resposta</option>
+            <option value="1">Manter os equipamentos funcionando</option>
+            <option value="2">Descobrir informações sobre o planeta</option>
+            <option value="3">Explorar o terreno e encontrar caminhos</option>
+            <option value="4">Planejar as etapas da expedição</option>
+          </select>
+
+          <button type="submit" id="login">
+            DESCOBRIR MEU PERFIL
+          </button>
+
+        </form>
+
+        <p id="msg"></p>
+
+        <section id="resultado" hidden>
+          <h2>Resultado da missão</h2>
+
+          <p id="dados_participante"></p>
+
+          <div id="perfis_resultado"></div>
+
+          <button type="button" id="refazer">
+            -refaça-
+          </button>
+        </section>
+
+      </div>
+    </main>
+
+    <div id="alerta">
+      <div id="caixa_alerta">
+        <button type="button" id="fechar_alerta">X</button>
+        <p id="msg_alerta"></p>
+      </div>
+    </div>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
